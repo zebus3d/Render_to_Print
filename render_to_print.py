@@ -223,9 +223,12 @@ def pixels_from_print(ps):
 
 class RENDER_PT_print(Panel):
     bl_label = "Render to Print"
+    # bl_space_type = 'PROPERTIES'
+    # bl_region_type = 'WINDOW'
+    # bl_context = 'render'
     bl_space_type = 'PROPERTIES'
     bl_region_type = 'WINDOW'
-    bl_context = 'render'
+    bl_context = "output"
 
     def draw(self, context):
 
