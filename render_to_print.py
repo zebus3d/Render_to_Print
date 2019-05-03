@@ -25,8 +25,10 @@ bl_info = {
     "blender": (2, 80, 0),
     "location": "Render > Render to Print",
     "description": "Set the size of the render for a print",
-    "wiki_url": "http://wiki.blender.org/index.php/Extensions:2.6/Py/Scripts/Render/Render to Print",
-    "tracker_url": "https://projects.blender.org/tracker/index.php?func=detail&aid=24219",
+    "wiki_url": "http://wiki.blender.org/index.php/Extensions:2.6/ \
+                Py/Scripts/Render/Render to Print",
+    "tracker_url": "https://projects.blender.org/tracker/index.php? \
+                    func=detail&aid=24219",
     "category": "Render"}
 
 
@@ -328,7 +330,11 @@ class RENDER_OT_apply_size(Operator):
         return {'FINISHED'}
 
 
-classes = ( RENDER_OT_apply_size, RENDER_PT_print, RenderPrintSertings)
+classes = ( 
+            RENDER_OT_apply_size, 
+            RENDER_PT_print, 
+            RenderPrintSertings
+            )
 
 def register():
     from bpy.utils import register_class
