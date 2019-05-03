@@ -19,7 +19,7 @@
 # <pep8 compliant>
 
 bl_info = {
-    "name": "zebus Render to Print",
+    "name": "Render to Print 0.3",
     "author": "Marco Crippa <thekrypt77@tiscali.it>, Dealga McArdle, zebus3d",
     "version": (0, 3),
     "blender": (2, 80, 0),
@@ -27,8 +27,7 @@ bl_info = {
     "description": "Set the size of the render for a print",
     "wiki_url": "http://wiki.blender.org/index.php/Extensions:2.6/ \
                 Py/Scripts/Render/Render to Print",
-    "tracker_url": "https://projects.blender.org/tracker/index.php? \
-                    func=detail&aid=24219",
+    "tracker_url": "https://developer.blender.org/maniphest/task/edit/form/2/",
     "category": "Render"}
 
 
@@ -125,7 +124,7 @@ update_settings_cb.level = False
 
 
 class RenderPrintSertings(PropertyGroup):
-    unit_from = EnumProperty(
+    unit_from: EnumProperty(
             name="Set from",
             description="Set from",
             items=(
@@ -134,7 +133,7 @@ class RenderPrintSertings(PropertyGroup):
                 ),
             default="CM_TO_PIXELS",
             )
-    orientation = EnumProperty(
+    orientation: EnumProperty(
             name="Page Orientation",
             description="Set orientation",
             items=(
@@ -144,42 +143,42 @@ class RenderPrintSertings(PropertyGroup):
             default="Portrait",
             update=update_settings_cb,
             )
-    preset = EnumProperty(
+    preset: EnumProperty(
             name="Select Preset",
             description="Select from preset",
             items=paper_presets,
             default="custom_1_1",
             update=update_settings_cb,
             )
-    dpi = IntProperty(
+    dpi: IntProperty(
             name="DPI",
             description="Dots per Inch",
             default=300,
             min=72, max=1800,
             update=update_settings_cb,
             )
-    width_cm = FloatProperty(
+    width_cm: FloatProperty(
             name="Width",
             description="Width in CM",
             default=5.0,
             min=1.0, max=100000.0,
             update=update_settings_cb,
             )
-    height_cm = FloatProperty(
+    height_cm: FloatProperty(
             name="Height",
             description="Height in CM",
             default=3.0,
             min=1.0, max=100000.0,
             update=update_settings_cb,
             )
-    width_px = IntProperty(
+    width_px: IntProperty(
             name="Pixel Width",
             description="Pixel Width",
             default=900,
             min=4, max=10000,
             update=update_settings_cb,
             )
-    height_px = IntProperty(
+    height_px: IntProperty(
             name="Pixel Height",
             description="Pixel Height",
             default=600,
